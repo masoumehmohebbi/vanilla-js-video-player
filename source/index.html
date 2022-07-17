@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="box-border overflow-x-hidden transition-all ease-in-out">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body class="w-screen">
+
+    <div class="container w-3/5 h-[78vh] relative flex flex-col"> <!--container-->
+        <div class="flex flex-row items-center justify-center w-full h-12 bg-main header justify-items-center">
+
+            <div class="flex flex-row w-16 ml-2 color-box justify-evenly">
+                <div data-color="142 68 173" class="w-4 h-4 bg-purpleMain 
+                                                    rounded-full cursor-pointer
+                                                     border-[3px] border-border 
+                                                     color-btn outline-none"></div>
+
+                <div data-color="52 152 219" class="w-4 h-4 border-[3px] rounded-full
+                                                     outline-none cursor-pointer 
+                                                     border-border color-btn 
+                                                     bg-primary"></div>
+
+                <div data-color="28 182 93" class="w-4 h-4 border-[3px] rounded-full 
+                                                    outline-none cursor-pointer 
+                                                    border-border color-btn 
+                                                    bg-secondary"></div>
+            </div>
+
+            <h1 class="w-11/12 py-2 text-2xl font-bold leading-10 text-center text-gray-200" >Video Player</h1>
+        </div>
+        <div class="flex flex-row w-full h-full videos-container"> <!--left & right container-->
+            <div class="w-2/5 h-full pt-2 pb-2 bg-gray-200 video-Files-container"> <!--left container-->
+                <h1 class="ml-3 font-extrabold text-gray-700 text-1xl">video Files:</h1>
+
+                <!-- <div class="container flex flex-row w-11/12 my-2 overflow-hidden bg-gray-200 rounded-md video-detail">
+                    <p class="flex pt-8 text-2xl bg-green-500">1</p>
+
+                        <img src="assets/medias/harry-potter-cover.jpg" class="object-cover w-1/2 pt-2 pb-2" alt="harry-potter-cover">
+                
+                    <ul class="flex flex-col justify-center">
+                        <li><label for="">Name: </label></li>
+                        <li><label for="">Duration: </label></li>
+                        <li><label for="">Format: </label></li>
+                    </ul>
+                </div>
+                 -->
+            </div>
+
+           <div class="relative w-3/5 h-full overflow-auto bg-gray-200 preview-container flex flex-col justify-center items-center">  <!--right container-->
+                <video class="p-2 h-1/2 mt-24 transition-all duration-150 ease-linear">
+                    <source src="assets/medias/harry-potter-movie.mp4" type="video/mp4">
+                </video> 
+                <div class="flex flex-col justify-center w-full bg-gray-200">
+                    <!-- proress -->
+                    <div class="w-11/12 h-1 mx-5 mb-10 mt-2 bg-white rounded cursor-pointer" id="progress-container">
+                        <div class="w-0 h-full duration-1000 bg-gray-900 rounded transition-width linear" id="progress"></div>
+                        <div class="relative flex justify-between top-1">
+                            <span id="current-time"></span>
+                            <span id="duration"></span>
+                        </div>
+                    </div>
+                    <!-- controls -->
+                    <div class="flex w-full justify-center items-center px-3">  
+                    
+                        <div class="flex">
+                            <img id="plus_5" src="assets/medias/plus5png.png" class="cursor-pointer h-8" alt="">
+                            <img id="speed2x" src="assets/medias/speed-2x.svg" class="cursor-pointer mx-2 h-8" alt="">
+                            <img id="minus_5" src="assets/medias/minus5.png" class="cursor-pointer h-8" alt="">
+                        </div>
+
+                        <div class="flex flex-row w-2/5 pb-2 player-controls justify-evenly mx-2">
+                            <i class="text-3xl text-gray-700 cursor-pointer fas fa-backward" id="prev" title="Previous"></i>
+                            <i class="text-3xl cursor-pointer fas fa-play main-button text-main" id="play" title="play"></i>
+                            <i class="text-3xl text-gray-700 cursor-pointer fas fa-forward" id="next" title="Next"></i>
+                        </div>
+                        
+                        
+                        <label class="w-36">
+                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                            <input class="w-20 overflow-hidden appearance-none bg-main rounded-full slider-thumb" type="range" id="slider1"
+                                min="0" max="100" value="100">
+                            </input>
+                        
+                            <span id="display1" class="">100</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="w-full p-5 bg-gray-200 text-md"><span class="font-extrabold drop-shadow-lg text-main">Movie description: <br><br></span><p class="video-desc transition-all">Enim lobortis scelerisque fermentum dui faucibus. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. In hac habitasse platea dictumst vestibulum rhoncus est. Adipiscing elit duis tristique sollicitudin nibh sit amet. Justo eget magna fermentum iaculis eu non diam phasellus. Turpis nunc eget lorem dolor. In fermentum et sollicitudin ac orci phasellus egestas.</p></div>
+           </div> 
+
+        </div>
+        <footer class="bottom-0 w-full font-extrabold text-center text-gray-200 drop-shadow-lg p-7 bg-main"><span class="font-extrabold drop-shadow-lg">The technologies used are :</span> Html, TailwindCss , Javascript</footer>
+    </div>
+
+<script src="assets/js/app.js"></script>    
+</body>
+</html>
