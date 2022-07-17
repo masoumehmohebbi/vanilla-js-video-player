@@ -1,0 +1,21 @@
+{
+  "name": "9.music-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./source/assets/css/style.css -o ./dist/output.css --watch",
+    "prod": "cross-env NODE_NVE=production npx tailwindcss -i ./source/assets/css/style.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.5"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
